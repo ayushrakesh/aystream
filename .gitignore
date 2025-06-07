@@ -41,6 +41,6 @@ Thumbs.db
 *.crt
 *.env.local
 
-# Ignore public assets if you want to keep them out of git (uncomment if needed)
-# public/photo.JPG
+# Ignore public assets if you want to keep them out of git
+public/photo.JPG
 # public/projects/*.png

@@ -1,0 +1,22 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "Oct 2023 – Dec 2023",
+    title: "Software Development Intern",
+    company: "Feesbook Technologies",
+    description:
+      "Contributed to several key features for a student coaching mobile application using Flutter, implementing intuitive functionalities that significantly enhanced user engagement and streamlined learning experiences. Integrated 5+ RESTful APIs and third-party libraries, enhancing app interactivity. Engineered responsive and optimized UI/UX designs, ensuring seamless cross-platform performance and consistent user experiences across iOS and Android devices.",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

@@ -1,0 +1,63 @@
+---
+interface SkillCategory {
+  category: string;
+  skills: string[];
+}
+
+const skillCategories: SkillCategory[] = [
+  {
+    category: "Languages",
+    skills: ["C++", "Dart"],
+  },
+  {
+    category: "Frameworks",
+    skills: ["Flutter", "Firebase", "Ansible"],
+  },
+  {
+    category: "Clouds & Databases",
+    skills: [
+      "PostgreSQL",
+      "Google Cloud",
+      "Firebase Firestore",
+      "Amazon Web Services",
+      "InfluxDB",
+    ],
+  },
+  {
+    category: "DevOps & Monitoring",
+    skills: ["Docker", "Kubernetes", "Grafana", "Telegraf", "SNMP"],
+  },
+  {
+    category: "Developer Tools",
+    skills: ["Postman", "VS Code", "GitHub", "GNS3"],
+  },
+  {
+    category: "Course Work",
+    skills: [
+      "Data Structures and Algorithms",
+      "CN",
+      "OOPS",
+      "OS",
+      "DBMS",
+      "Network Security",
+    ],
+  },
+];
+---
+
+<div class="space-y-6">
+  {skillCategories.map((categoryData) => (
+    <div>
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">
+        {categoryData.category}
+      </h3>
+      <div class="flex flex-wrap gap-2">
+        {categoryData.skills.map((skill) => (
+          <span class="px-3 py-1 text-sm rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300">
+            {skill}
+          </span>
+        ))}
+      </div>
+    </div>
+  ))}
+</div> 

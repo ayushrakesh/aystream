@@ -1,0 +1,46 @@
+# Node modules
+node_modules/
+
+# Build output
+.vite/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.*
+
+# IDE/editor config
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependency directories
+.pnpm/
+
+# Misc
+*.local
+*.log
+
+# Astro cache
+.astro/
+
+# Sensitive or user-specific
+*.pem
+*.key
+*.crt
+*.env.local
+
+# Ignore public assets if you want to keep them out of git (uncomment if needed)
+# public/photo.JPG
+# public/projects/*.png

@@ -3,7 +3,16 @@ import GitHub from "./icons/GitHub.astro"
 import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
+import CPP from "./icons/CPP.astro"
+import Linux from "./icons/Linux.astro"
+import MySQL from "./icons/MySQL.astro"
+import SQL from "./icons/SQL.astro"
+import Docker from "./icons/Docker.astro"
+import InfluxDB from "./icons/InfluxDB.astro"
+import Telegraf from "./icons/Telegraf.astro"
+import Grafana from "./icons/Grafana.astro"
 import LinkButton from "./LinkButton.astro"
+
 
 const TAGS = {
   NEXT: {
@@ -16,24 +25,72 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  CPP: {
+    name: "C++",
+    class: "bg-[#003159] text-white",
+    icon: CPP,
+  },
+  LINUX: {
+    name: "Linux",
+    class: "bg-[#003159] text-white",
+    icon: Linux,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#003159] text-white",
+    icon: MySQL,
+  },
+  SQL: {
+    name: "SQL",
+    class: "bg-[#003159] text-white",
+    icon: SQL,
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-[#2496ED] text-white",
+    icon: Docker,
+  },
+  INFLUXDB: {
+    name: "InfluxDB",
+    class: "bg-[#22ADF6] text-white",
+    icon: InfluxDB,
+  },
+  TELEGRAF: {
+    name: "Telegraf",
+    class: "bg-[#00A0E3] text-white",
+    icon: Telegraf,
+  },
+  GRAFANA: {
+    name: "Grafana",
+    class: "bg-[#F46800] text-white",
+    icon: Grafana,
+  },
 }
+
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
-    description:
-      "SVG logo library of the most popular brands. +10k visits per month. +2K svgs downloaded. Created from scratch with Next.js, React, and Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    title: "Allocyte: Custom Linux Memory Manager",
+    description: "A custom Linux heap memory manager written in C++, featuring dynamic allocation, deallocation, and real-time memory usage visualization. Designed for performance analysis and educational insight into low-level memory management.",
+    link: "https://github.com/ayushrakesh/allocyte",
+    github: "https://github.com/ayushrakesh/allocyte",
+    image: "/projects/allocyte.png",
+    tags: [TAGS.CPP, TAGS.LINUX],
   },
   {
-    title: "AdventJS - Programming challenges with JavaScript and TypeScript",
-    description:
-      "Free platform with programming challenges. More than 1 million visits in one month. +50K challenges completed. Created from scratch with Next.js, React, and Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    title: "ShipShop: A Database solution",
+    description:"Designed and implemented a scalable MySQL database for 'ShipShop', a fictional e-commerce platform, featuring comprehensive schema, automated SQL logic, and analytics-ready views. The project includes ER diagrams, performance optimizations, and robust backup strategies for real-world business scenarios.",
+    link: "https://github.com/ayushrakesh/shipshop",
+    github: "https://github.com/ayushrakesh/shipshop",
+    image: "/projects/shipshop.png",
+    tags: [TAGS.MYSQL, TAGS.SQL],
+  },
+  {
+    title: "Visinetra: Network Visibility & Telemetry Automation ",
+    description:"Visinetra is an infrastructure monitoring solution that leverages Docker, InfluxDB, Telegraf, and Grafana to provide real-time metrics and visualization. It features automated deployment and configuration using YAML and supports scalable monitoring for distributed systems.",    
+    link: "https://github.com/ayushrakesh/visinetra",
+    github: "https://github.com/ayushrakesh/visinetra",
+    image: "/projects/visinetra.png",
+    tags: [TAGS.DOCKER, TAGS.INFLUXDB, TAGS.TELEGRAF, TAGS.GRAFANA],
   },
 ]
 ---
@@ -44,7 +101,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105 mb-6" loading="lazy" src={image} />
     </div>
   </div>
 

@@ -9,7 +9,11 @@ export default defineConfig({
     preview: {
       host: true,
       port: parseInt(process.env.PORT) || 4321,
-      allowedHosts: ['aystream.onrender.com']
+      allowedHosts: [
+         'aystream.onrender.com',
+         'www.aystream.onrender.com',
+         '.onrender.com'
+      ]
     }
   }
 })

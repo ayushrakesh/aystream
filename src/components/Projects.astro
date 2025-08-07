@@ -1,18 +1,17 @@
 ---
-import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import Link from "./icons/Link.astro"
-import CPP from "./icons/CPP.astro"
-import Linux from "./icons/Linux.astro"
-import MySQL from "./icons/MySQL.astro"
-import SQL from "./icons/SQL.astro"
-import Docker from "./icons/Docker.astro"
-import InfluxDB from "./icons/InfluxDB.astro"
-import Telegraf from "./icons/Telegraf.astro"
-import Grafana from "./icons/Grafana.astro"
-import LinkButton from "./LinkButton.astro"
-
+import GitHub from "./icons/GitHub.astro";
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Link from "./icons/Link.astro";
+import CPP from "./icons/CPP.astro";
+import Linux from "./icons/Linux.astro";
+import MySQL from "./icons/MySQL.astro";
+import SQL from "./icons/SQL.astro";
+import Docker from "./icons/Docker.astro";
+import InfluxDB from "./icons/InfluxDB.astro";
+import Telegraf from "./icons/Telegraf.astro";
+import Grafana from "./icons/Grafana.astro";
+import LinkButton from "./LinkButton.astro";
 
 const TAGS = {
   NEXT: {
@@ -65,20 +64,21 @@ const TAGS = {
     class: "bg-[#F46800] text-white",
     icon: Grafana,
   },
-}
+};
 
 const PROJECTS = [
   {
-    title: "Allocyte: Custom Linux Memory Manager",
-    description: "A custom Linux heap memory manager written in C++, featuring dynamic allocation, deallocation, and real-time memory usage visualization. Designed for performance analysis and educational insight into low-level memory management.",
-    link: "https://github.com/ayushrakesh/allocyte",
-    github: "https://github.com/ayushrakesh/allocyte",
-    image: "/projects/allocyte.png",
-    tags: [TAGS.CPP, TAGS.LINUX],
+    title :"Schedulo: Interactive CPU Scheduling Visualizer",
+    description :"Schedulo is a web-based tool for visualizing and understanding classic CPU scheduling algorithms. Users can select an algorithm (FCFS, SJF, SRTF, or Round Robin), input arrival and burst times, and instantly see the computed results in a clear tabular format. The project features a splash animation, a simple input form, and dynamic output—all running entirely in the browser with no installation required.",
+    link :"https://ay-schedulo.netlify.app/",
+    github :"https://github.com/ayushrakesh/schedulo",
+    image :"/projects/schedulo.png",
+    tags :[TAGS.NEXT, TAGS.TAILWIND]
   },
   {
     title: "Datavine: SQL Analytics and Reporting System",
-    description: "Datavine is a comprehensive SQL analytics project that models, analyzes, and reports on sales, customer, and product data using a robust MySQL data warehouse. It features advanced SQL techniques—including window functions, CTEs, and dynamic segmentation—to deliver actionable business insights and automated reporting. The project is fully automated for easy setup and reproducibility.",
+    description:
+      "Datavine is a comprehensive SQL analytics project that models, analyzes, and reports on sales, customer, and product data using a robust MySQL data warehouse. It features advanced SQL techniques—including window functions, CTEs, and dynamic segmentation—to deliver actionable business insights and automated reporting. The project is fully automated for easy setup and reproducibility.",
     link: "https://github.com/ayushrakesh/datavine",
     github: "https://github.com/ayushrakesh/datavine",
     image: "/projects/datavine.png",
@@ -86,7 +86,8 @@ const PROJECTS = [
   },
   {
     title: "Visinetra: Network Visibility & Telemetry Automation ",
-    description:"Visinetra is an infrastructure monitoring solution that leverages Docker, InfluxDB, Telegraf, and Grafana to provide real-time metrics and visualization. It features automated deployment and configuration using YAML and supports scalable monitoring for distributed systems.",    
+    description:
+      "Visinetra is an infrastructure monitoring solution that leverages Docker, InfluxDB, Telegraf, and Grafana to provide real-time metrics and visualization. It features automated deployment and configuration using YAML and supports scalable monitoring for distributed systems.",
     link: "https://github.com/ayushrakesh/visinetra",
     github: "https://github.com/ayushrakesh/visinetra",
     image: "/projects/visinetra.png",
@@ -94,65 +95,78 @@ const PROJECTS = [
   },
   {
     title: "ShipShop: A Database solution",
-    description:"Designed and implemented a scalable MySQL database for 'ShipShop', a fictional e-commerce platform, featuring comprehensive schema, automated SQL logic, and analytics-ready views. The project includes ER diagrams, performance optimizations, and robust backup strategies for real-world business scenarios.",
+    description:
+      "Designed and implemented a scalable MySQL database for 'ShipShop', a fictional e-commerce platform, featuring comprehensive schema, automated SQL logic, and analytics-ready views. The project includes ER diagrams, performance optimizations, and robust backup strategies for real-world business scenarios.",
     link: "https://github.com/ayushrakesh/shipshop",
     github: "https://github.com/ayushrakesh/shipshop",
     image: "/projects/shipshop.png",
     tags: [TAGS.MYSQL, TAGS.SQL],
   },
-]
+  {
+    title: "Allocyte: Custom Linux Memory Manager",
+    description:
+      "A custom Linux heap memory manager written in C++, featuring dynamic allocation, deallocation, and real-time memory usage visualization. Designed for performance analysis and educational insight into low-level memory management.",
+    link: "https://github.com/ayushrakesh/allocyte",
+    github: "https://github.com/ayushrakesh/allocyte",
+    image: "/projects/allocyte.png",
+    tags: [TAGS.CPP, TAGS.LINUX],
+  },
+];
 ---
 
 <div class="flex flex-col gap-y-16">
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105 mb-6" loading="lazy" src={image} />
-    </div>
-  </div>
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105 mb-6"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
 
-      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
-            <LinkButton href={github}>
-              <GitHub class="size-6" />
-              Code
-              
-            </LinkButton>
-          )}
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Preview
-            </LinkButton>
-          )}
-        </footer>
-    </div>
-  </div>
-</article>
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="size-6" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
     ))
   }
 </div>
-
-
-

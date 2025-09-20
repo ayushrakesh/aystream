@@ -11,6 +11,8 @@ import Docker from "./icons/Docker.astro";
 import InfluxDB from "./icons/InfluxDB.astro";
 import Telegraf from "./icons/Telegraf.astro";
 import Grafana from "./icons/Grafana.astro";
+import Go from "./icons/Go.astro";
+import PostgreSQL from "./icons/PostgreSQL.astro";
 import LinkButton from "./LinkButton.astro";
 
 const TAGS = {
@@ -64,16 +66,36 @@ const TAGS = {
     class: "bg-[#F46800] text-white",
     icon: Grafana,
   },
+  GO: {
+    name: "Go",
+    class: "bg-[#00ADD8] text-white",
+    icon: Go,
+  },
+  POSTGRESQL: {
+    name: "PostgreSQL",
+    class: "bg-[#336791] text-white",
+    icon: PostgreSQL,
+  },
 };
 
 const PROJECTS = [
   {
-    title :"Schedulo: Interactive CPU Scheduling Visualizer",
-    description :"Schedulo is a web-based tool for visualizing and understanding classic CPU scheduling algorithms. Users can select an algorithm (FCFS, SJF, SRTF, or Round Robin), input arrival and burst times, and instantly see the computed results in a clear tabular format. The project features a splash animation, a simple input form, and dynamic output—all running entirely in the browser with no installation required.",
-    link :"https://ay-schedulo.netlify.app/",
-    github :"https://github.com/ayushrakesh/schedulo",
-    image :"/projects/schedulo.png",
-    tags :[TAGS.NEXT, TAGS.TAILWIND]
+    title: "GoPay: Dockerized Banking API with Transaction Safety",
+    description:
+      "A simple banking API built with Go and Gin-Gonic, featuring user authentication with PASETO tokens, account management, and secure money transfers. It uses PostgreSQL as the database with sqlc for type-safe interactions and is easily deployable with Docker.",
+    link: "https://github.com/ayushrakesh/gopay",
+    github: "https://github.com/ayushrakesh/gopay",
+    image: "/projects/gopay.png",
+    tags: [TAGS.GO, TAGS.POSTGRESQL, TAGS.DOCKER],
+  },
+  {
+    title: "Schedulo: Interactive CPU Scheduling Visualizer",
+    description:
+      "Schedulo is a web-based tool for visualizing and understanding classic CPU scheduling algorithms. Users can select an algorithm (FCFS, SJF, SRTF, or Round Robin), input arrival and burst times, and instantly see the computed results in a clear tabular format. The project features a splash animation, a simple input form, and dynamic output—all running entirely in the browser with no installation required.",
+    link: "https://ay-schedulo.netlify.app/",
+    github: "https://github.com/ayushrakesh/schedulo",
+    image: "/projects/schedulo.png",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
   {
     title: "Datavine: SQL Analytics and Reporting System",
